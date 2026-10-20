@@ -39,7 +39,7 @@ h2 { font-size: 1.6rem; margin-bottom: 0.5rem; line-height: 1.3; }
 h2 + p { color: var(--text2); font-size: 0.92rem; margin-bottom: 2rem; max-width: 720px; }
 
 /* HERO - 3 column */
-#hero { padding: 0; display: grid; grid-template-columns: 1fr 1.5fr 1fr; min-height: calc(100vh - 60px); align-items: stretch; }
+#hero { padding: 0; display: grid; grid-template-columns: 1fr 1.5fr; min-height: calc(100vh - 60px); align-items: stretch; }
 .hero-side { overflow: hidden; background: var(--bg2); position: relative; }
 .hero-side img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.92); }
 .hero-side::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.15), rgba(10,10,10,0.55)); pointer-events: none; }
@@ -151,6 +151,7 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: ce
 .skydive { max-width: 720px; margin: 0 auto; }
 .skydive img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 4px; }
 .skydive figcaption { margin-top: 1rem; text-align: center; font-style: italic; color: var(--text2, #a1a1a1); line-height: 1.7; font-size: 0.95rem; }
+.video-wrap.vertical { max-width: 360px; aspect-ratio: 9 / 16; }
 </style>
 </head>
 <body>
@@ -174,9 +175,9 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: ce
 
 <!-- S1: HERO -->
 <section id="hero">
-  <div class="hero-side">
-    <img src="assets/award.png" alt="Sankalp Bandyopadhyay receiving an award at A Night of Stars" />
-    <div class="hero-caption"><strong>Award Recognition</strong>A Night of Stars</div>
+    <div class="hero-side">
+    <img src="assets/panel.png" alt="Sankalp Bandyopadhyay presenting on a panel at an industry forum" />
+    <div class="hero-caption">Presenting at industry forums on how organizations can bridge the technical gap between legacy architectures and advanced cloud, programmable APIs, and next-generation AI workflows.</div>
   </div>
   <div class="hero-content">
     <div class="hero-name">Sankalp<br>Bandyopadhyay</div>
@@ -197,11 +198,7 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: ce
       <a href="assets/Sankalp-SaaS-Sales-Resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </div>
-  <div class="hero-side">
-    <img src="assets/panel.png" alt="Sankalp Bandyopadhyay presenting on a panel at an industry forum" />
-    <div class="hero-caption">Presenting at industry forums on how organizations can bridge the technical gap between legacy architectures and advanced cloud, programmable APIs, and next-generation AI workflows.</div>
-  </div>
-</section>
+  </section>
 
 <section class="skydive-section">
   <figure class="skydive">
@@ -216,11 +213,10 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: ce
     <div class="section-tag">Introduction &middot; 2-Min Executive Pitch</div>
     <h2>The commercial philosophy, in my own words.</h2>
     <p>Platform wins, core-banking cloud motions, and how I run deal governance from first discovery to signed enterprise ARR.</p>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/fJ9rUzIMcZQ?rel=0" title="Sankalp Bandyopadhyay - Executive Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    <div class="video-wrap vertical">
+      <iframe src="https://www.youtube.com/embed/rh1gmGspXU0?rel=0" title="Sankalp Bandyopadhyay - Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
     </div>
     <div class="video-note">Commercial philosophy &middot; Core-banking cloud wins &middot; Framework execution</div>
-    <div class="video-note"><a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" target="_blank" rel="noopener" style="color:var(--accent);">Watch on YouTube</a></div>
   </div>
 </section>
 
@@ -313,26 +309,31 @@ footer { border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: ce
 <section id="cases">
   <div class="container">
     <div class="section-tag">Flagship Enterprise Case Studies</div>
-    <h2>Six regulated-market wins, end to end.</h2>
-    <p>BFSI, aviation, SaaS and telecom - every deal documented Situation to Result, with the stakeholder navigation decisions that made each one close.</p>
+    <h2>Four regulated-market wins, end to end.</h2>
+    <p>Private and regional banks, digital lenders, and Tier-1 financial institutions, each documented from Situation to Result.</p>
     <div class="test-grid" style="margin-bottom:2rem;">
       <a class="test-card" href="case-studies.html#case-1" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
-        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">I &middot; BFSI</strong></div>
-        <div class="test-quote" style="font-style:normal;color:var(--text);">Mitigating Multi-Channel Fraud Latency for a Prominent Regional Tier-1 Lender - GSI co-sell compressing a 90-day validation cycle into real-time activation.</div>
-        <div class="test-author"><strong>$2.0M ARR &middot; 125% Quota</strong></div>
+        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">I &middot; Private-Sector Bank</strong></div>
+        <div class="test-quote" style="font-style:normal;color:var(--text);">Containerising Monolithic Credit Infrastructure for a Major Private-Sector Bank</div>
+        <div class="test-author"><strong>$110K initial ACV + $90K expansion ARR</strong></div>
       </a>
-      <a class="test-card" href="case-studies.html#case-5" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
-        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">V &middot; Enterprise SaaS</strong></div>
-        <div class="test-quote" style="font-style:normal;color:var(--text);">Navigating Complex Banking Procurement to Land a Tier-1 Anchor Enterprise Account - a 6-month compliance cycle compressed through C-suite value framing.</div>
-        <div class="test-author"><strong>$480K ARR &middot; 140% Territory Attainment</strong></div>
+      <a class="test-card" href="case-studies.html#case-2" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
+        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">II &middot; Subprime Digital Lender</strong></div>
+        <div class="test-quote" style="font-style:normal;color:var(--text);">Deploying a Unified Data Platform for a Subprime Digital Lender</div>
+        <div class="test-author"><strong>$90K ARR product agreement</strong></div>
       </a>
-      <a class="test-card" href="case-studies.html#case-6" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
-        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">VI &middot; Telecom</strong></div>
-        <div class="test-quote" style="font-style:normal;color:var(--text);">Mitigating Contract Churn across High-Value Corporate Portfolios - MPLS modernization defending the book against tier-2 price undercutting.</div>
-        <div class="test-author"><strong>&#8377;15Cr+ ARR &middot; 25% YoY Growth</strong></div>
+      <a class="test-card" href="case-studies.html#case-3" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
+        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">III &middot; Tier-1 Anchor FI</strong></div>
+        <div class="test-quote" style="font-style:normal;color:var(--text);">Landing a Tier-1 Anchor Financial Institution via SaaS Data-Ingestion APIs</div>
+        <div class="test-author"><strong>$400K ARR flagship contract</strong></div>
+      </a>
+      <a class="test-card" href="case-studies.html#case-4" style="border-left-color:var(--border);text-decoration:none;color:inherit;display:block;">
+        <div class="test-author" style="margin-bottom:0.5rem;"><strong style="color:var(--accent);">IV &middot; Regional Commercial Bank</strong></div>
+        <div class="test-quote" style="font-style:normal;color:var(--text);">Engineering a Cross-Border API Clearing Layer for a Regional Financial Institution</div>
+        <div class="test-author"><strong>$300K ARR enterprise agreement</strong></div>
       </a>
     </div>
-    <a href="case-studies.html" class="btn btn-primary">Read All Six Case Studies &rarr;</a>
+    <a href="case-studies.html" class="btn btn-primary">Read All Four Case Studies &rarr;</a>
   </div>
 </section>
 
